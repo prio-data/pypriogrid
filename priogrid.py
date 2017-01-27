@@ -278,10 +278,10 @@ class Cell(object):
             self.xcoord = xcoord
             self.ycoord = ycoord
 
-            # calculate row, col, and gid            
-            relx = (xcoord + 180) / 360.0
+            # calculate row, col, and gid
+            relx = (xcoord+0.25 + 180) / 360.0 # (offsets half a pixel)
             self.col = int(round(720 * relx))
-            rely = (ycoord + 90) / 180.0
+            rely = (ycoord+0.25 + 90) / 180.0 # (offsets half a pixel)
             self.row = int(round(360 * rely))
             self.gid = 720 * (self.row-1) + self.col
 
