@@ -256,7 +256,7 @@ class Cell(object):
             
             self.gid = gid
             
-            self.row = 1 + gid // 720
+            self.row = 1 + (gid-1) // 720
             self.col = gid - 720 * (self.row-1)
             self.xcoord = -180 + 0.25 + 0.5 * (self.col - 1)
             self.ycoord = -90 + 0.25 + 0.5 * (self.row - 1)
